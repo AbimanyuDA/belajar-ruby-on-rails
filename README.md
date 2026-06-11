@@ -1,24 +1,40 @@
-# README
+# Rails Task Manager
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple, lightweight Task Manager application built with Ruby on Rails 8.1 and SQLite.
 
-Things you may want to cover:
+## System Requirements
+- **Ruby version**: 4.0.1
+- **Rails version**: 8.1.3
+- **Database**: SQLite3
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+Follow these steps to run the application locally on your Mac:
 
-* Configuration
+### 1. Install Dependencies
+Run bundler to install all required gem dependencies:
+```bash
+/opt/homebrew/opt/ruby/bin/bundle install
+```
 
-* Database creation
+### 2. Setup Database & Run Migrations
+Initialize the development and test databases:
+```bash
+/opt/homebrew/opt/ruby/bin/bundle exec rails db:migrate
+/opt/homebrew/opt/ruby/bin/bundle exec rails db:migrate RAILS_ENV=test
+```
 
-* Database initialization
+### 3. Run the Test Suite
+Ensure everything is working correctly by running the built-in test suite:
+```bash
+/opt/homebrew/opt/ruby/bin/bundle exec rails test
+```
 
-* How to run the test suite
+### 4. Start the Rails Server
+Start the local Puma development server:
+```bash
+/opt/homebrew/opt/ruby/bin/bundle exec rails server
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Once started, open your browser and navigate to:
+[http://localhost:3000](http://localhost:3000) (which redirects to your tasks list).
